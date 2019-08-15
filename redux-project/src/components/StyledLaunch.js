@@ -5,8 +5,8 @@ export const Card = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 17em;
+  margin-right: 17em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding: 0.5em;
@@ -14,6 +14,7 @@ export const Card = styled.div`
   height: auto;
   color: #21B8E5
   border-radius: 0.25em;
+  border: 0.15em solid rgba(10, 162, 100, 0.4);
 `;
 export const P = styled.div`
     color: white;

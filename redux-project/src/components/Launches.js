@@ -9,6 +9,11 @@ const Launches = props => {
     return(
         <>
             <h1>Upcoming Launches</h1>
+            {props.launches.map(launch => {
+                    return(
+                        <Launch key={launch.mission_name} launch={launch} />
+                    )
+                })}
             <Button onClick={props.getData}>
                 {props.isLoading ? (
                 <Loader type="Rings" color="#00BFFF" height={30} width={100} />
@@ -16,11 +21,7 @@ const Launches = props => {
                 'See Upcoming Launches'
                 )}
             </Button>
-                {props.launches.map(launch => {
-                    return(
-                        <Launch key={launch.mission_name} launch={launch} />
-                    )
-                })}
+
         </>
     )
 }
