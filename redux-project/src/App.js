@@ -1,10 +1,11 @@
 import React from 'react';
+import Launches from './components/Launches.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Project Working
+      <Launches />
     </div>
   );
 }
