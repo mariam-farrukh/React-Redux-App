@@ -20,6 +20,8 @@ export const P = styled.div`
     color: white;
 `;
 export const Button = styled.button`
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     background-color: #0AA264;
     border: 0.15em solid rgb(68, 227, 162);
     border-radius: 0.5em;

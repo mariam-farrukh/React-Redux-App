@@ -1,7 +1,9 @@
 import {
     FETCH_LAUNCH_DATA_START,
     FETCH_LAUNCH_DATA_SUCCESS,
-    FETCH_LAUNCH_DATA_FAILURE
+    FETCH_LAUNCH_DATA_FAILURE,
+    FETCH_PAST_LAUNCH_DATA_START,
+    FETCH_PAST_LAUNCH_DATA_SUCCESS,
   } from '../actions'
   
   const initialState = {
@@ -25,6 +27,19 @@ import {
           launches: action.payload,
           error: ''
         };
+        case FETCH_PAST_LAUNCH_DATA_START:
+            return {
+              ...state,
+              isLoading: true,
+              error: ''
+            };
+        case FETCH_PAST_LAUNCH_DATA_SUCCESS:
+            return {
+              ...state,
+              isLoading: false,
+              launches: action.payload,
+              error: ''
+            };
       default:
         return state;
     }
