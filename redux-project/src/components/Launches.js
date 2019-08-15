@@ -3,18 +3,19 @@ import Launch from './Launch.js'
 import {connect} from 'react-redux';
 import { getData } from '../store/actions';
 import Loader from 'react-loader-spinner';
+import { Button } from './StyledLaunch';
 
 const Launches = props => {
     return(
         <>
-            <h2>Upcoming Launches</h2>
-            <button onClick={props.getData}>
+            <h1>Upcoming Launches</h1>
+            <Button onClick={props.getData}>
                 {props.isLoading ? (
-                <Loader type="Rings" color="#00BFFF" height="15" width="100" />
+                <Loader type="Rings" color="#00BFFF" height={30} width={100} />
                 ) : (
-                'Get Upcoming Launches'
+                'See Upcoming Launches'
                 )}
-            </button>
+            </Button>
                 {props.launches.map(launch => {
                     return(
                         <Launch key={launch.mission_name} launch={launch} />
