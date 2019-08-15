@@ -8,7 +8,7 @@ export const getData = () => {
   return dispatch => {
     dispatch({ type: FETCH_LAUNCH_DATA_START });
     axios
-      .get('https://api.spacexdata.com/v3/launches/past')
+      .get('https://api.spacexdata.com/v3/launches/upcoming')
       .then(res => {
         console.log(res);
         dispatch({ type: FETCH_LAUNCH_DATA_SUCCESS, payload: res.data });
